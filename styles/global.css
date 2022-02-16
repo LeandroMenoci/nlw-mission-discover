@@ -39,7 +39,7 @@ input,
 textarea {
   /* clamp é o intervalo de tamanho(mínimo - normal - máximo) */
   font-size: clamp(14px, 1.6rem, 2vw);
-  font-family: var(--font-poppins);
+  font-family: var(--font-open-sans);
 }
 
 .content {
@@ -57,4 +57,58 @@ textarea {
   clip-path: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* -----------INPUT BUTTONS------------- */
+input,
+button,
+.button {
+  border-radius: 0.8rem;
+  height: 5rem;
+}
+
+button,
+.button {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  line-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--blue);
+  color: var(--white);
+
+  cursor: pointer;
+
+  transition: filter 0.2s;
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(1.2);
+}
+
+button > img,
+.button > img {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+  background: var(--white);
+  color: var(--blue);
+  border: 0.2rem solid var(--blue);
+}
+
+/* --------HEADER----------- */
+.content header {
+  width: 80%;
+  margin: 3.5rem auto;
+}
+
+.content header img {
+  width: 16.7rem;
 }
