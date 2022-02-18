@@ -6,6 +6,8 @@ const server = express(); // para iniciar o express
 
 server.set('view engine', 'ejs') // para o servidor entender que tem que rodar um arquivo ejs
 
+server.use(express.static('public')) // express usa conteúdo estático e o nome da pasta onde ficará guardado o conteúdo
+
 server.set('views', path.join(__dirname, 'views')) // path pega o caminho da pasta onde está o projeto, join irá juntar, o dirname irá se tornar src (variável global)
 
 server.use(route)
