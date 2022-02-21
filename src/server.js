@@ -10,6 +10,8 @@ server.use(express.static('public')) // express usa conteúdo estático e o nome
 
 server.set('views', path.join(__dirname, 'views')) // path pega o caminho da pasta onde está o projeto, join irá juntar, o dirname irá se tornar src (variável global)
 
+server.use(express.urlencoded({ extended: true }))
+
 server.use(route)
 
 server.listen(3000, () => console.log("RODANDO ")) // para iniciar o server, escolher a porta e podemos deixar uma mensagem no console para certificar que o server foi iniciado
